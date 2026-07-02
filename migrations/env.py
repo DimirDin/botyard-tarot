@@ -38,6 +38,7 @@ def run_migrations_offline() -> None:
 def do_run_migrations(connection):
     connection.execute_do_sql = None
     connection.exec_driver_sql(f"CREATE SCHEMA IF NOT EXISTS {DB_SCHEMA}")
+    connection.commit()
     context.configure(
         connection=connection,
         target_metadata=target_metadata,
