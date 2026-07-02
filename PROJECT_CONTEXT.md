@@ -55,15 +55,11 @@ Source of truth: `scripts/generate_content.py` (regenerate with
   `MAJOR` / `RANKS` tables in the generator) composed through theme-specific
   sentence templates so the three themes read distinctly for the same card,
   not just with the theme name swapped in.
-- **Wave 2 — TODO, partial proof-of-schema**: `finance`, `health`, `spirit`
-  are fully written for 15 cards only (see `WAVE2_CARDS` set in
-  `scripts/generate_content.py`: Fool, Magician, Empress, Hermit, Death,
-  Tower, Star, Sun, World, Ace of Pentacles, 10 of Pentacles, 2 of Cups,
-  3 of Swords, King of Wands, Queen of Cups). All other cards have a clearly
-  marked `"TODO (волна 2): ..."` string in those three theme fields instead
-  of invented filler — **do not ship these to users as real content**, the
-  UI/engine treats them as normal strings so nothing crashes, but they are
-  not real tarot interpretations yet.
+- **Wave 2 — COMPLETE for all 78 cards**: `finance`, `health`, `spirit` are
+  generated for every card via the same essence-driven theme templates used
+  for love/career (see `finance_text` / `health_text` / `spirit_text` in
+  `scripts/generate_content.py`), so they read distinctly per theme while
+  staying consistent with each card's core symbolism. No `TODO` stubs remain.
 - `yes_no` and `advice` are fully generated for all 78 cards × both
   orientations (156 advice lines, 156 yes/no values), plus a small hand-tuned
   override table for the most narratively-strong majors (Tower, Devil, Moon,
@@ -205,8 +201,6 @@ Self-hosted runner + rsync, same pattern as sibling bots — see
   before creating a reading — `telegram_id` is currently trusted as sent by
   the client. Fine for MVP behind Telegram's own WebView, but should be
   hardened before wider exposure.
-- Wave 2 content (finance/health/spirit) is templated for 63 of 78 cards —
-  see "Content database" section above for exactly which 15 are hand-done.
 - No image assets — `image_ref` is a placeholder slug string only
   (`cards/<id>.png`), Mini App renders text-only card fronts.
 - History UI in the Mini App is a simple list (truncated text); no per-card
