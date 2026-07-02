@@ -3,6 +3,7 @@ import MenuScreen from "./components/MenuScreen";
 import ThemePicker from "./components/ThemePicker";
 import SpreadStage from "./components/SpreadStage";
 import HistoryScreen from "./components/HistoryScreen";
+import MysticBackground from "./components/MysticBackground";
 import { CardSummary, createReading, fetchCards, getTelegramUserId, ReadingResponse } from "./api";
 
 type Screen = "menu" | "theme" | "reading" | "history" | "paying";
@@ -103,7 +104,7 @@ export default function App() {
 
   return (
     <div className={`app-shell ${lowPower ? "low-power" : ""}`}>
-      <div className="stardust-bg" />
+      <MysticBackground lowPower={lowPower} />
       {error && <div className="content-layer" style={{ color: "#ff6b6b" }}>{error}</div>}
 
       {screen === "menu" && (
