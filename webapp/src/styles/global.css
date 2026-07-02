@@ -232,18 +232,73 @@ h1, h2, h3, h4 {
   transform: rotateY(180deg) rotate(180deg);
 }
 
-.tarot-card.revealed.bloom .tarot-card-inner::after {
-  content: "";
+.tarot-card-front.has-image {
+  padding: 0;
+  overflow: hidden;
+}
+.tarot-card-art {
   position: absolute;
-  inset: -20px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.9), transparent 60%);
-  animation: bloom-flash 0.5s ease-out forwards;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.tarot-card-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 4px 5px;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--text);
+  background: linear-gradient(to top, rgba(15, 10, 26, 0.85), transparent);
   pointer-events: none;
 }
-@keyframes bloom-flash {
-  0% { opacity: 0.9; transform: scale(0.4); }
-  100% { opacity: 0; transform: scale(1.6); }
+/* the reversed face is rotated 180°; counter-rotate the caption so it stays
+   readable — the two rotations cancel, so base padding/gradient still apply.
+   Position it at the container's top edge, which is the visual bottom. */
+.tarot-card-front.reversed .tarot-card-caption {
+  transform: rotate(180deg);
+  top: 0;
+  bottom: auto;
+}
+
+/* ---------- Stardust reveal ----------
+   Particles converge from around the card toward its center while the
+   artwork "condenses" out of a blur — no white flash. */
+.dust-particle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  animation: dust-converge 0.9s ease-in forwards;
+  z-index: 2;
+}
+@keyframes dust-converge {
+  0% {
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1);
+    opacity: 0;
+  }
+  35% { opacity: 1; }
+  100% {
+    transform: translate(-50%, -50%) scale(0.15);
+    opacity: 0;
+  }
+}
+
+.tarot-card.revealed .tarot-card-front {
+  animation: card-condense 0.8s ease-out 0.25s backwards;
+}
+@keyframes card-condense {
+  0% { filter: blur(10px) saturate(1.6); opacity: 0.25; }
+  100% { filter: blur(0) saturate(1); opacity: 1; }
 }
 
 .position-label {
@@ -294,7 +349,8 @@ h1, h2, h3, h4 {
   .deck-shuffling .deck-card-back { animation: none; }
   .tarot-card-inner { transition: transform 0.25s linear; }
   .tarot-card.flying .tarot-card-inner { animation: none; }
-  .tarot-card.revealed.bloom .tarot-card-inner::after { animation: none; display: none; }
+  .dust-particle { animation: none; display: none; }
+  .tarot-card.revealed .tarot-card-front { animation: none; }
   .neon-btn { animation: none; }
   .reading-block { animation: none; opacity: 1; transform: none; }
 }
@@ -302,7 +358,8 @@ h1, h2, h3, h4 {
 .low-power .stardust-bg { animation: none; }
 .low-power .deck-shuffling .deck-card-back { animation: none; }
 .low-power .tarot-card.flying .tarot-card-inner { animation: none; }
-.low-power .tarot-card.revealed.bloom .tarot-card-inner::after { display: none; }
+.low-power .dust-particle { display: none; }
+.low-power .tarot-card.revealed .tarot-card-front { animation: none; }
 .low-power .neon-btn { animation: none; }
 
 .footer-note {
