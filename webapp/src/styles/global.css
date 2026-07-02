@@ -168,8 +168,8 @@ h1, h2, h3, h4 {
 
 .tarot-card {
   position: relative;
-  width: 96px;
-  height: 152px;
+  width: 118px;
+  height: 188px;
   cursor: pointer;
 }
 
@@ -230,6 +230,11 @@ h1, h2, h3, h4 {
 }
 .tarot-card-front.reversed {
   transform: rotateY(180deg) rotate(180deg);
+  transition: transform 0.9s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+/* after a beat, the reversed card gently rights itself so the artwork is readable */
+.tarot-card-front.reversed.righted {
+  transform: rotateY(180deg) rotate(0deg);
 }
 
 .tarot-card-front.has-image {
@@ -266,6 +271,51 @@ h1, h2, h3, h4 {
   transform: rotate(180deg);
   top: 0;
   bottom: auto;
+}
+/* once the card rights itself, the caption rides along back to the bottom */
+.tarot-card-front.reversed.righted .tarot-card-caption {
+  transform: none;
+  top: auto;
+  bottom: 0;
+}
+
+/* ---------- Tap-to-zoom ---------- */
+.card-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: rgba(15, 10, 26, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: zoom-fade-in 0.25s ease-out;
+  cursor: zoom-out;
+}
+@keyframes zoom-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.card-zoom-art {
+  max-width: 82vw;
+  max-height: 74vh;
+  border-radius: 16px;
+  border: 1px solid rgba(177, 78, 255, 0.6);
+  box-shadow: 0 0 40px rgba(177, 78, 255, 0.45);
+  animation: zoom-pop 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+@keyframes zoom-pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.card-zoom-name {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  color: var(--text);
+  text-shadow: 0 0 12px rgba(177, 78, 255, 0.8);
 }
 
 /* ---------- Stardust reveal ----------
@@ -351,6 +401,8 @@ h1, h2, h3, h4 {
   .tarot-card.flying .tarot-card-inner { animation: none; }
   .dust-particle { animation: none; display: none; }
   .tarot-card.revealed .tarot-card-front { animation: none; }
+  .tarot-card-front.reversed { transition: none; }
+  .card-zoom-overlay, .card-zoom-art { animation: none; }
   .neon-btn { animation: none; }
   .reading-block { animation: none; opacity: 1; transform: none; }
 }

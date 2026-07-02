@@ -38,6 +38,8 @@ export default function TarotCard({ card, upright, positionLabel, revealDelayMs,
   const [flying, setFlying] = useState(true);
   const [revealed, setRevealed] = useState(false);
   const [imgOk, setImgOk] = useState(true);
+  const [righted, setRighted] = useState(false);
+  const [zoomed, setZoomed] = useState(false);
 
   const dust = useMemo(
     () => (lowPower ? [] : makeDust(16, card?.arcana === "major")),
@@ -47,17 +49,26 @@ export default function TarotCard({ card, upright, positionLabel, revealDelayMs,
   useEffect(() => {
     const flyTimer = setTimeout(() => setFlying(false), 50);
     const revealTimer = setTimeout(() => setRevealed(true), revealDelayMs);
+    // reversed cards: show upside-down first (so the orientation registers),
+    // then gently rotate upright so the artwork is actually readable
+    const rightTimer = !upright
+      ? setTimeout(() => setRighted(true), revealDelayMs + 1800)
+      : undefined;
     return () => {
       clearTimeout(flyTimer);
       clearTimeout(revealTimer);
+      if (rightTimer) clearTimeout(rightTimer);
     };
-  }, [revealDelayMs]);
+  }, [revealDelayMs, upright]);
 
   const arcanaClass = card?.arcana === "major" ? "major" : "minor";
 
   return (
     <div>
-      <div className={`tarot-card ${flying ? "flying" : ""} ${revealed ? "revealed" : ""}`}>
+      <div
+        className={`tarot-card ${flying ? "flying" : ""} ${revealed ? "revealed" : ""}`}
+        onClick={() => revealed && imgOk && card && setZoomed(true)}
+      >
         {revealed &&
           dust.map((p, i) => (
             <span
@@ -76,7 +87,7 @@ export default function TarotCard({ card, upright, positionLabel, revealDelayMs,
           ))}
         <div className="tarot-card-inner">
           <div className="tarot-card-face tarot-card-back">✦</div>
-          <div className={`tarot-card-face tarot-card-front ${arcanaClass} ${!upright ? "reversed" : ""} ${imgOk && card ? "has-image" : ""}`}>
+          <div className={`tarot-card-face tarot-card-front ${arcanaClass} ${!upright ? "reversed" : ""} ${righted ? "righted" : ""} ${imgOk && card ? "has-image" : ""}`}>
             {imgOk && card ? (
               <>
                 <img
@@ -95,6 +106,15 @@ export default function TarotCard({ card, upright, positionLabel, revealDelayMs,
         </div>
       </div>
       {positionLabel && <div className="position-label">{positionLabel}{!upright ? " · перевёрнута" : ""}</div>}
+      {zoomed && card && (
+        <div className="card-zoom-overlay" onClick={() => setZoomed(false)}>
+          <img className="card-zoom-art" src={`/cards/${card.id}.webp`} alt={card.name_ru} draggable={false} />
+          <div className="card-zoom-name">
+            {card.name_ru}
+            {!upright ? " · перевёрнута" : ""}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
