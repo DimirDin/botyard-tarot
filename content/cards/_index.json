@@ -1,0 +1,470 @@
+[
+  {
+    "id": "major_00_fool",
+    "name_ru": "Шут",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_01_magician",
+    "name_ru": "Маг",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_02_high_priestess",
+    "name_ru": "Верховная Жрица",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_03_empress",
+    "name_ru": "Императрица",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_04_emperor",
+    "name_ru": "Император",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_05_hierophant",
+    "name_ru": "Иерофант",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_06_lovers",
+    "name_ru": "Влюблённые",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_07_chariot",
+    "name_ru": "Колесница",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_08_strength",
+    "name_ru": "Сила",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_09_hermit",
+    "name_ru": "Отшельник",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_10_wheel",
+    "name_ru": "Колесо Фортуны",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_11_justice",
+    "name_ru": "Справедливость",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_12_hanged_man",
+    "name_ru": "Повешенный",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_13_death",
+    "name_ru": "Смерть",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_14_temperance",
+    "name_ru": "Умеренность",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_15_devil",
+    "name_ru": "Дьявол",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_16_tower",
+    "name_ru": "Башня",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_17_star",
+    "name_ru": "Звезда",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_18_moon",
+    "name_ru": "Луна",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_19_sun",
+    "name_ru": "Солнце",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_20_judgement",
+    "name_ru": "Суд",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "major_21_world",
+    "name_ru": "Мир",
+    "arcana": "major",
+    "suit": null
+  },
+  {
+    "id": "minor_wands_ace",
+    "name_ru": "Туз Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_02",
+    "name_ru": "Двойка Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_03",
+    "name_ru": "Тройка Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_04",
+    "name_ru": "Четвёрка Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_05",
+    "name_ru": "Пятёрка Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_06",
+    "name_ru": "Шестёрка Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_07",
+    "name_ru": "Семёрка Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_08",
+    "name_ru": "Восьмёрка Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_09",
+    "name_ru": "Девятка Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_10",
+    "name_ru": "Десятка Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_page",
+    "name_ru": "Паж Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_knight",
+    "name_ru": "Рыцарь Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_queen",
+    "name_ru": "Королева Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_wands_king",
+    "name_ru": "Король Жезлов",
+    "arcana": "minor",
+    "suit": "wands"
+  },
+  {
+    "id": "minor_cups_ace",
+    "name_ru": "Туз Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_02",
+    "name_ru": "Двойка Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_03",
+    "name_ru": "Тройка Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_04",
+    "name_ru": "Четвёрка Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_05",
+    "name_ru": "Пятёрка Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_06",
+    "name_ru": "Шестёрка Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_07",
+    "name_ru": "Семёрка Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_08",
+    "name_ru": "Восьмёрка Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_09",
+    "name_ru": "Девятка Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_10",
+    "name_ru": "Десятка Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_page",
+    "name_ru": "Паж Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_knight",
+    "name_ru": "Рыцарь Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_queen",
+    "name_ru": "Королева Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_cups_king",
+    "name_ru": "Король Кубков",
+    "arcana": "minor",
+    "suit": "cups"
+  },
+  {
+    "id": "minor_swords_ace",
+    "name_ru": "Туз Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_02",
+    "name_ru": "Двойка Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_03",
+    "name_ru": "Тройка Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_04",
+    "name_ru": "Четвёрка Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_05",
+    "name_ru": "Пятёрка Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_06",
+    "name_ru": "Шестёрка Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_07",
+    "name_ru": "Семёрка Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_08",
+    "name_ru": "Восьмёрка Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_09",
+    "name_ru": "Девятка Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_10",
+    "name_ru": "Десятка Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_page",
+    "name_ru": "Паж Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_knight",
+    "name_ru": "Рыцарь Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_queen",
+    "name_ru": "Королева Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_swords_king",
+    "name_ru": "Король Мечей",
+    "arcana": "minor",
+    "suit": "swords"
+  },
+  {
+    "id": "minor_pentacles_ace",
+    "name_ru": "Туз Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_02",
+    "name_ru": "Двойка Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_03",
+    "name_ru": "Тройка Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_04",
+    "name_ru": "Четвёрка Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_05",
+    "name_ru": "Пятёрка Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_06",
+    "name_ru": "Шестёрка Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_07",
+    "name_ru": "Семёрка Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_08",
+    "name_ru": "Восьмёрка Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_09",
+    "name_ru": "Девятка Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_10",
+    "name_ru": "Десятка Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_page",
+    "name_ru": "Паж Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_knight",
+    "name_ru": "Рыцарь Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_queen",
+    "name_ru": "Королева Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  },
+  {
+    "id": "minor_pentacles_king",
+    "name_ru": "Король Пентаклей",
+    "arcana": "minor",
+    "suit": "pentacles"
+  }
+]
