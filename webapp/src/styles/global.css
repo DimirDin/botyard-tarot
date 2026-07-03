@@ -64,6 +64,79 @@ h1, h2, h3, h4 {
   100% { background-position: 100% 100%; }
 }
 
+/* ---------- Nebula clouds ---------- */
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  will-change: transform, opacity;
+}
+.nebula-1 {
+  top: -10vh;
+  left: -20vw;
+  width: 90vw;
+  height: 70vh;
+  background: radial-gradient(ellipse at center, rgba(177, 78, 255, 0.16), transparent 65%);
+  animation: nebula-morph 46s ease-in-out infinite alternate;
+}
+.nebula-2 {
+  top: 30vh;
+  right: -25vw;
+  width: 85vw;
+  height: 65vh;
+  background: radial-gradient(ellipse at center, rgba(61, 253, 255, 0.09), transparent 65%);
+  animation: nebula-morph 58s ease-in-out -20s infinite alternate-reverse;
+}
+@keyframes nebula-morph {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate(12vw, 8vh) scale(1.25); opacity: 1; }
+  100% { transform: translate(-6vw, -5vh) scale(0.9); opacity: 0.6; }
+}
+
+/* ---------- Aurora (occasional) ----------
+   Long cycle: the glow is only visible for a short window of it,
+   so the aurora "visits" the sky rather than living there. */
+.aurora {
+  position: absolute;
+  top: -12vh;
+  left: -10vw;
+  right: -10vw;
+  height: 42vh;
+  filter: blur(28px);
+  transform-origin: top center;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.aurora-1 {
+  background: linear-gradient(
+    100deg,
+    transparent 15%,
+    rgba(61, 253, 255, 0.16) 35%,
+    rgba(177, 78, 255, 0.2) 55%,
+    rgba(61, 253, 255, 0.12) 72%,
+    transparent 88%
+  );
+  animation: aurora-visit 47s ease-in-out infinite;
+}
+.aurora-2 {
+  height: 34vh;
+  background: linear-gradient(
+    80deg,
+    transparent 20%,
+    rgba(177, 78, 255, 0.14) 45%,
+    rgba(61, 253, 255, 0.18) 65%,
+    transparent 85%
+  );
+  animation: aurora-visit 63s ease-in-out -23s infinite;
+}
+@keyframes aurora-visit {
+  0%, 55% { opacity: 0; transform: skewY(-3deg) translateX(-6vw); }
+  62% { opacity: 1; }
+  70% { opacity: 0.75; transform: skewY(2deg) translateX(4vw); }
+  78% { opacity: 1; transform: skewY(-2deg) translateX(-2vw); }
+  88%, 100% { opacity: 0; transform: skewY(-3deg) translateX(6vw); }
+}
+
 /* ---------- Parallax star layers + meteors ---------- */
 .star-layer {
   position: absolute;
@@ -524,7 +597,7 @@ h1, h2, h3, h4 {
 /* ---------- Reduced motion & low-power fallback ---------- */
 @media (prefers-reduced-motion: reduce) {
   .stardust-bg { animation: none; }
-  .star-layer, .meteor, .float-symbol, .smoke { animation: none; display: none; }
+  .star-layer, .meteor, .float-symbol, .smoke, .nebula, .aurora { animation: none; display: none; }
   .deck-shuffling .deck-card-back { animation: none; }
   .tarot-card-inner { transition: transform 0.25s linear; }
   .tarot-card.flying .tarot-card-inner { animation: none; }

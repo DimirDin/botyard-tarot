@@ -40,9 +40,15 @@ export default function MysticBackground({ lowPower }: Props) {
       <div className="stardust-bg" />
       {!lowPower && (
         <>
+          {/* slow-morphing nebula clouds behind everything */}
+          <div className="nebula nebula-1" />
+          <div className="nebula nebula-2" />
           {/* parallax star layers drifting at different speeds */}
           <div className="star-layer star-layer-far" />
           <div className="star-layer star-layer-near" />
+          {/* aurora waves at the top — appear occasionally, not constantly */}
+          <div className="aurora aurora-1" />
+          <div className="aurora aurora-2" />
           {/* occasional meteors */}
           <span className="meteor meteor-1" />
           <span className="meteor meteor-2" />
