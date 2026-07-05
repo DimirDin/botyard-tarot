@@ -11,7 +11,7 @@ from app.engine.reading_service import ensure_user
 router = Router(name="start")
 
 WELCOME = (
-    "🔮 *AI-Таро*\n\n"
+    "🔮 *taroT*\n\n"
     "Оффлайн-бот для расклада Таро: без обращений к внешним API, всё "
     "работает мгновенно на локальной базе значений карт.\n\n"
     "Выберите расклад:"

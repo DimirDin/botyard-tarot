@@ -1,4 +1,4 @@
-# botyard-tarot — AI-Таро (offline tarot bot + Mini App)
+# botyard-tarot — taroT (offline tarot bot + Mini App)
 
 Context doc for future sessions on this platform. Mirrors the format used by
 sibling bots (botyard-*). Read this before touching the repo.

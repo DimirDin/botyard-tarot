@@ -15,7 +15,7 @@ interface Props {
 export default function MenuScreen({ onSelect, onHistory }: Props) {
   return (
     <div className="content-layer">
-      <h1>🔮 AI-Таро</h1>
+      <h1>🔮 taroT</h1>
       <p>Оффлайн-расклады на локальной базе значений — без обращений к внешним нейросетям.</p>
       <div className="picker-grid">
         {SPREADS.map((s) => (

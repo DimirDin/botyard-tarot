@@ -5,7 +5,7 @@ import os
 
 from app.api.routers import readings, cards, payments
 
-app = FastAPI(title="AI-Tarot API")
+app = FastAPI(title="taroT API")
 
 app.add_middleware(
     CORSMiddleware,

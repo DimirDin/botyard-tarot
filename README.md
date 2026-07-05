@@ -1,4 +1,4 @@
-# AI-Таро (botyard-tarot)
+# taroT (botyard-tarot)
 
 Offline Telegram tarot bot + Mini App. No LLM calls — readings are assembled
 from a local structured content database via a deterministic template engine.
